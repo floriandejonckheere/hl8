@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { App as KonstaApp } from 'konsta/react'
 
 import './App.css'
