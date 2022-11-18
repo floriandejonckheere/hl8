@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Button } from '@material-tailwind/react';
 
 import Navbar from './Navbar'
 import greeting from '../lib/greeting'
 
-export default function Data() {
+export default function Account() {
   return (
     <>
       <div className="p-8 flex flex-col">
@@ -16,6 +17,12 @@ export default function Data() {
           </p>
           <p className="text-xl">Good  {greeting()},</p>
           <h1 className="text-3xl font-bold">Ilka Valtonen</h1>
+        </div>
+
+        <div className="mt-4">
+          <Link to="/patient/" className="my-4">
+            <Button color="red" size="lg" fullWidth>Remove account</Button>
+          </Link>
         </div>
       </div>
 

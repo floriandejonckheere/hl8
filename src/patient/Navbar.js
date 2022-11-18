@@ -37,7 +37,7 @@ export default function Navbar() {
             <span className="block h-8 pl-3 text-3xl text-center">
               <MdAccountCircle />
             </span>
-          <span className="block text-xs">Overview</span>
+          <span className="block text-xs">Account</span>
         </div>
       </NavLink>
     </div>
