@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { App as KonstaApp } from 'konsta/react'
+import { ThemeProvider } from '@material-tailwind/react'
 
 import './App.css'
 
@@ -10,13 +10,13 @@ import ProfessionalHome from './professional/Home'
 
 function App() {
   return (
-    <KonstaApp theme="material">
+    <ThemeProvider>
       <Routes>
         <Route path="/" element={<Signin />} />
         <Route path="/patient" element={<PatientHome />} />
         <Route path="/professional" element={<ProfessionalHome />} />
       </Routes>
-    </KonstaApp>
+    </ThemeProvider>
   )
 }
 

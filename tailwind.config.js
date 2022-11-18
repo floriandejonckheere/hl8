@@ -1,7 +1,8 @@
-const konstaConfig = require('konsta/config');
-
 /** @type {import('tailwindcss').Config} */
-module.exports = konstaConfig({
+
+const withMT = require("@material-tailwind/react/utils/withMT")
+
+module.exports = withMT({
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
