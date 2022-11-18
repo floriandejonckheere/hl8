@@ -7,7 +7,7 @@ export default function Data() {
   return (
     <>
       <div className="p-8 flex flex-col">
-        <Greeting />
+        <Greeting name="Ilka Valtonen" />
       </div>
 
       <Navbar />

@@ -9,7 +9,7 @@ export default function Account() {
   return (
     <>
       <div className="p-8 flex flex-col">
-        <Greeting />
+        <Greeting name="Ilka Valtonen" />
 
         <div className="mt-4">
           <Link to="/patient/" className="my-4">
