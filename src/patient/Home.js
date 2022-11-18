@@ -1,15 +1,15 @@
 import React  from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from '@material-tailwind/react';
 
 import Navbar from './Navbar'
 import Greeting from '../Greeting'
+
+import { patient } from '../data'
 
 export default function Home() {
   return (
     <>
       <div className="p-8 flex flex-col">
-        <Greeting name="Ilka Valtonen" />
+        <Greeting name={patient} />
       </div>
 
       <Navbar />

@@ -11,6 +11,8 @@ import PatientData from './patient/Data'
 import PatientAccount from './patient/Account'
 
 import ProfessionalHome from './professional/Home'
+import ProfessionalPatients from './professional/Patients'
+import ProfessionalAccount from './professional/Account'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/patient/account/" element={<PatientAccount />} />
 
         <Route path="/professional" element={<ProfessionalHome />} />
+        <Route path="/professional/patients/" element={<ProfessionalPatients />} />
+        <Route path="/professional/account/" element={<ProfessionalAccount />} />
       </Routes>
     </ThemeProvider>
   )
