@@ -1,16 +1,19 @@
-import './App.css';
-import { App as KonstaApp, Page, Navbar, Block } from 'konsta/react';
+import React, { useState } from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
+import { App as KonstaApp } from 'konsta/react'
+
+import './App.css'
+
+import Home from './Home'
 
 function App() {
   return (
     <KonstaApp theme="material">
-      <Page>
-        <Navbar title="Health Level 8" />
-
-        <Block strong>Hello world!</Block>
-      </Page>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </KonstaApp>
-  );
+  )
 }
 
-export default App;
+export default App
