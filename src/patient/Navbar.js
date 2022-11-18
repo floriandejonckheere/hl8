@@ -22,7 +22,7 @@ export default function Navbar() {
         className={({ isActive }) => `flex flex-grow items-center justify-center p-2 ${!isActive ? "text-gray-500" : undefined}` }
       >
         <div className="text-center">
-            <span className="block h-8 pl-3 text-3xl text-center">
+            <span className="block h-8 pl-2 text-3xl text-center">
               <MdAreaChart />
             </span>
           <span className="block text-xs">My data</span>
@@ -34,7 +34,7 @@ export default function Navbar() {
         className={({ isActive }) => `flex flex-grow items-center justify-center p-2 ${!isActive ? "text-gray-500" : undefined}` }
       >
         <div className="text-center">
-            <span className="block h-8 pl-3 text-3xl text-center">
+            <span className="block h-8 pl-2 text-3xl text-center">
               <MdAccountCircle />
             </span>
           <span className="block text-xs">Account</span>
