@@ -6,6 +6,7 @@ import './App.css'
 
 import Signin from './Signin'
 import PatientHome from './patient/Home'
+import PatientData from './patient/Data'
 import ProfessionalHome from './professional/Home'
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
     <ThemeProvider>
       <Routes>
         <Route path="/" element={<Signin />} />
-        <Route path="/patient" element={<PatientHome />} />
+
+        <Route path="/patient/" element={<PatientHome />} />
+        <Route path="/patient/data/" element={<PatientData />} />
+
         <Route path="/professional" element={<ProfessionalHome />} />
       </Routes>
     </ThemeProvider>
