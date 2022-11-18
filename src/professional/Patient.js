@@ -9,7 +9,7 @@ import { professionals, patients } from '../data'
 export default function Patient() {
   let params = useParams();
 
-  const patient = patients[params.id]
+  const patient = patients.find(patient => patient.id == params.id)
 
   return (
     <>
