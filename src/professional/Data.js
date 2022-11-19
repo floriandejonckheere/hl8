@@ -8,7 +8,7 @@ import Backend  from '../Backend'
 export default function Data() {
   return (
     <>
-      <div className="p-8 flex flex-col">
+      <div className="p-8 flex flex-col bg-gray-100 h-full">
         <Greeting name={Backend.professionals[0].name} />
 
         <span className="font-bold">{Backend.patients[0].name}</span>

@@ -17,7 +17,7 @@ export default function Patient() {
 
   return (
     <>
-      <div className="p-8 flex flex-col">
+      <div className="p-8 flex flex-col bg-gray-100 h-full">
         <Greeting name={Backend.professionals[0].name} />
 
         <div className="text-center">

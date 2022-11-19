@@ -21,7 +21,7 @@ export default function Account() {
 
   return (
     <>
-      <div className="p-8 flex flex-col">
+      <div className="p-8 flex flex-col bg-gray-100 h-full">
         <Greeting name={patient.name} />
 
         <div className="mt-4">
