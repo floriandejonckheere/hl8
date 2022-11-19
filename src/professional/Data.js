@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Greeting from '../Greeting'
 
 import Backend  from '../Backend'
+import {Button} from "@material-tailwind/react";
 
 export default function Data() {
   return (
@@ -14,7 +15,11 @@ export default function Data() {
         <span className="font-bold">{Backend.patients[0].name}</span>
 
         <img src="/images/blood_pressure_chart.svg" alt="Blood Pressure" className="mt-4" />
-        <img src="/images/heart_rate_chart.svg" alt="Heart Rate" className="mt-16" />
+        <img src="/images/heart_rate_chart.svg" alt="Heart Rate" className="mt-12" />
+
+        <div class="mt-8">
+          <Button color="blue" size="lg" fullWidth>Export data</Button>
+        </div>
       </div>
 
       <Navbar />
