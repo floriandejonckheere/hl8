@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import Greeting from '../Greeting'
 
 import { professionals, patients } from '../data'
-import { Button, Switch } from '@material-tailwind/react'
+import { Button, Switch, Select, Option } from '@material-tailwind/react'
 
 export default function Patient() {
   let params = useParams();
@@ -30,7 +30,15 @@ export default function Patient() {
           <Switch id="prescriptions" label="Medication prescriptions" />
         </div>
 
-        <Link to={`/professional/patients/${patient.id}/request`} className="mt-60">
+        <div className="mt-8">
+          <Select label="Duration of access grant">
+            <Option>1 day</Option>
+            <Option>3 days</Option>
+            <Option>1 week</Option>
+          </Select>
+        </div>
+
+        <Link to={`/professional/patients/${patient.id}/request`} className="mt-52">
           <Button color="blue" size="lg" fullWidth>Request access to data</Button>
         </Link>
       </div>

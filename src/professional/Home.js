@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     fetch(`${endpoint}/`).then(
-      res => setState(res.data)
+      res => setState(res.data.json())
     )
   })
 
