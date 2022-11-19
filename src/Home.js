@@ -9,9 +9,6 @@ import {
   TabbarLink,
   Block,
   Icon,
-  List,
-  ListItem,
-  Toggle,
 } from 'konsta/react'
 
 import { MdEmail, MdToday, MdFileUpload } from 'react-icons/md'
