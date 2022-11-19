@@ -27,7 +27,17 @@ const Backend = {
       sex: "Male",
       image: "patient3-thumb.jpg",
     }
-  ]
+  ],
+  requests: [
+    {
+      professionalId: 0,
+      patientId: 1,
+      healthcare: true,
+      prescriptions: false,
+      duration: 1,
+      approved: null,
+    }
+  ],
 }
 
 export default Backend
