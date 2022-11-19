@@ -3,22 +3,20 @@ import React  from 'react'
 import Navbar from './Navbar'
 import Greeting from '../Greeting'
 
-import { patients } from '../data'
+import Backend  from '../Backend'
 
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
-  Typography,
 } from '@material-tailwind/react'
 
 export default function Home() {
   return (
     <>
       <div className="p-8 flex flex-col">
-        <Greeting name={patients[0].name} />
+        <Greeting name={Backend.patients[0].name} />
 
         <Card className="w-full mb-3">
           <CardBody>

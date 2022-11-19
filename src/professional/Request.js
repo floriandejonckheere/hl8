@@ -4,18 +4,19 @@ import { Link, useParams } from 'react-router-dom'
 import Navbar from './Navbar'
 import Greeting from '../Greeting'
 
-import { professionals, patients } from '../data'
 import { Button, Switch, Select, Option } from '@material-tailwind/react'
+
+import Backend  from '../Backend'
 
 export default function Patient() {
   let params = useParams();
 
-  const patient = patients.find(patient => patient.id == params.id)
+  const patient = Backend.patients.find(patient => patient.id == params.id)
 
   return (
     <>
       <div className="p-8 flex flex-col justify-between">
-        <Greeting name={professionals[0].name} />
+        <Greeting name={Backend.professionals[0].name} />
 
         You are requesting access to the data of
         <div className="text-xl font-bold">

@@ -9,15 +9,15 @@ import {
 import Navbar from './Navbar'
 import Greeting from '../Greeting'
 
-import { professionals, patients } from '../data'
+import Backend from '../Backend'
 
 export default function Patients() {
   return (
     <>
       <div className="p-8 flex flex-col">
-        <Greeting name={professionals[0].name} />
+        <Greeting name={Backend.professionals[0].name} />
 
-        {patients.map((patient) => (
+        {Backend.patients.map((patient) => (
           <Link to={`/professional/patients/${patient.id}`} key={patient.id}>
             <Card className="w-full mb-3">
               <CardBody>
