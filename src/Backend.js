@@ -28,7 +28,7 @@ const Backend = {
       image: "patient3-thumb.jpg",
     }
   ],
-  requestId: 0,
+  requestId: 2,
   requests: [
     {
       id: 0,
@@ -38,7 +38,25 @@ const Backend = {
       prescriptions: false,
       duration: 1,
       approved: null,
-    }
+    },
+    {
+      id: 1,
+      professionalId: 0,
+      patientId: 2,
+      healthcare: true,
+      prescriptions: true,
+      duration: 7,
+      approved: true,
+    },
+    {
+      id: 2,
+      professionalId: 0,
+      patientId: 3,
+      healthcare: true,
+      prescriptions: true,
+      duration: 7,
+      approved: false,
+    },
   ],
 }
 

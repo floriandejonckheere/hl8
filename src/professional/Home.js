@@ -1,17 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Navbar from './Navbar'
 import Greeting from '../Greeting'
 
 import Backend  from '../Backend'
-import { Card, CardBody } from '@material-tailwind/react'
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+} from '@material-tailwind/react'
 
 export default function Home() {
-  const requests = Backend.requests.filter(r => r.professionalId == 0 && r.approved == null)
+  const requests = Backend.requests.filter(r => r.professionalId == 0)
 
   return (
     <>
-      <div className="p-8 flex flex-col">
+      <div className="p-8 pb-16 flex flex-col">
         <Greeting name={Backend.professionals[0].name} />
 
         {requests.length == 0 && (
@@ -31,8 +37,21 @@ export default function Home() {
               </ul>
 
               <p className="mt-4">Duration: {request.duration} days</p>
-              <p className="mt-4">Not approved yet</p>
             </CardBody>
+            <CardFooter divider className="flex items-center justify-between py-3">
+              {request.approved == null && (
+                <div>Not yet approved</div>
+              ) || request.approved == true && (
+                <>
+                  <div className="text-green-400 font-bold">Approved</div>
+                  <Link to="/professional/data">
+                    <Button color="blue">Open</Button>
+                  </Link>
+                </>
+              ) || request.approved == false && (
+                <div className="text-red-400 font-bold">Rejected</div>
+              )}
+            </CardFooter>
           </Card>
         ))}
       </div>

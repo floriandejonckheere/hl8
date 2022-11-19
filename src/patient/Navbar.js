@@ -4,7 +4,7 @@ import { MdAccountCircle, MdAreaChart, MdSpaceDashboard } from 'react-icons/md'
 
 export default function Navbar() {
   return (
-    <div className="bg-white absolute bottom-0 w-full border-t border-gray-200 flex">
+    <div className="bg-white fixed bottom-0 w-full border-t border-gray-200 flex">
       <NavLink
         to="/patient/"
         className={({ isActive }) => `flex flex-grow items-center justify-center p-2 ${!isActive ? "text-gray-500" : undefined}` }
