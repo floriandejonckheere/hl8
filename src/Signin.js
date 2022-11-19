@@ -8,10 +8,11 @@ function Home() {
     <div className="px-8 flex flex-col">
       <div className="mt-32 w-full flex justify-center">
         <MdHealthAndSafety className="w-32 h-32 block" />
-
       </div>
 
-      <div className="text-center text-4xl block font-bold text-gray-800 mt-12">Health Level Eight</div>
+      <div className="text-center mt-12">
+        <img src="/images/logo.png" alt="Health Level Eight" />
+      </div>
 
       <Link to="/patient/" className="mt-32 mb-4">
         <Button color="blue" size="lg" fullWidth>Sign in as patient</Button>
