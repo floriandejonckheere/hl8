@@ -14,7 +14,11 @@ export default function Account() {
         <Greeting name={Backend.professionals[0].name} />
 
         <div className="mt-4">
-          <Link to="/patient/" className="my-4">
+          <p className="text-red-400 font-bold mb-8">
+            WARNING: removing your account will delete all your data permanently and irrevocably.
+          </p>
+
+          <Link to="/" className="my-4">
             <Button color="red" size="lg" fullWidth>Remove account</Button>
           </Link>
         </div>
