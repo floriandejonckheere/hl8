@@ -12,6 +12,7 @@ export default function Data() {
         <Greeting name={Backend.patients[0].name} />
 
         <img src="/images/blood_pressure_chart.svg" alt="Blood Pressure" />
+        <img src="/images/heart_rate_chart.svg" alt="Heart Rate" className="mt-16" />
       </div>
 
       <Navbar />
