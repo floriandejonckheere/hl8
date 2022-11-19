@@ -1,3 +1,5 @@
+export const endpoint = "http://192.168.100.131:5000/"
+
 export const professionals = [
   {
     id: 0,
