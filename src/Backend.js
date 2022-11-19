@@ -2,7 +2,7 @@ const Backend = {
   professionals: [
     {
       id: 0,
-      name: "Dr. Ilka Valkonen",
+      name: "Dr. Valteri Valkonen",
     }
   ],
   patients: [
@@ -30,15 +30,15 @@ const Backend = {
   ],
   requestId: 2,
   requests: [
-    {
-      id: 0,
-      professionalId: 0,
-      patientId: 1,
-      healthcare: true,
-      prescriptions: false,
-      duration: 1,
-      approved: null,
-    },
+    // {
+    //   id: 0,
+    //   professionalId: 0,
+    //   patientId: 1,
+    //   healthcare: true,
+    //   prescriptions: false,
+    //   duration: 1,
+    //   approved: null,
+    // },
     {
       id: 1,
       professionalId: 0,
