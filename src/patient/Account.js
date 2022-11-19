@@ -1,6 +1,6 @@
-import React  from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from '@material-tailwind/react';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { Button, Input } from '@material-tailwind/react';
 
 import Navbar from './Navbar'
 import Greeting from '../Greeting'
@@ -8,12 +8,29 @@ import Greeting from '../Greeting'
 import Backend  from '../Backend'
 
 export default function Account() {
+  const patient = Backend.patients[0]
+
+  const [name, setName] = useState(patient.name)
+  const navigate = useNavigate()
+
+  const update = (name) => {
+    patient.name = name
+
+    navigate('/patient/')
+  }
+
   return (
     <>
       <div className="p-8 flex flex-col">
-        <Greeting name={Backend.patients[0].name} />
+        <Greeting name={patient.name} />
 
         <div className="mt-4">
+          <Input id="healthcare" label="Name" defaultValue={patient.name} onChange={(event) => setName(event.target.value)} />
+        </div>
+
+        <Button color="blue" size="lg" fullWidth className="mt-8" onClick={() => update(name)}>Save</Button>
+
+        <div className="mt-60">
           <p className="text-red-400 font-bold mb-8">
             WARNING: removing your account will delete all your data permanently and irrevocably.
           </p>
