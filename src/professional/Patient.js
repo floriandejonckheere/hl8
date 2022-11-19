@@ -1,10 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 
 import Navbar from './Navbar'
 import Greeting from '../Greeting'
 
 import { professionals, patients } from '../data'
+import {Button} from "@material-tailwind/react";
 
 export default function Patient() {
   let params = useParams();
@@ -17,7 +18,7 @@ export default function Patient() {
         <Greeting name={professionals[0].name} />
 
         <div className="text-center">
-          <img src={`/images/${patient.image}`} alt={patient.name} className="rounded-full w-64 h-64 mx-auto mb-12" />
+          <img src={`/images/${patient.image}`} alt={patient.name} className="rounded-full w-64 h-64 mx-auto mb-8" />
 
           <div className="text-xl font-bold">
             {patient.name}
@@ -28,6 +29,10 @@ export default function Patient() {
           <span className="float-right">{patient.birthdate}</span>
           {patient.sex}
         </div>
+
+        <Link to={`/professional/patients/${patient.id}/request`} className="mt-8">
+          <Button color="blue" size="lg" fullWidth>Request access to data</Button>
+        </Link>
       </div>
 
       <Navbar />
