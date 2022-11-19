@@ -20,7 +20,7 @@ function Home() {
   return (
     <Page>
       <Navbar
-        title="Health Level 8"
+        title="Health Level Eight"
         left={<NavbarBackLink onClick={() => navigate(-1)} />}
       />
 

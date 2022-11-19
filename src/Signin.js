@@ -11,7 +11,7 @@ function Home() {
 
       </div>
 
-      <div className="text-center text-4xl block font-bold text-gray-800 mt-12">Health Level 8</div>
+      <div className="text-center text-4xl block font-bold text-gray-800 mt-12">Health Level Eight</div>
 
       <Link to="/patient/" className="mt-32 mb-4">
         <Button color="blue" size="lg" fullWidth>Sign in as patient</Button>
