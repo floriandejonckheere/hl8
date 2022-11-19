@@ -29,8 +29,6 @@ export default function Home() {
 
   const requests = Backend.requests.filter(r => r.patientId == 1 && r.approved == null)
 
-  console.log(requests)
-
   return (
     <>
       <div className="p-8 flex flex-col">
@@ -38,18 +36,17 @@ export default function Home() {
 
         {requests.length == 0 && (
             <div className="italic">
-              No access requests
+              You currently have no access requests to review
             </div>
         )}
 
         {requests.map((request, index) => (
           <Card className="w-full mb-3" key={request.id}>
             <CardBody>
-              <span className="float-right text-gray-400 text-sm">Date here</span>
               <strong>{Backend.professionals.find(p => p.id == request.professionalId).name}</strong> wants to
               <ul className="mt-4">
-                {request.healthcare ? (<li>Read healthcare data</li>) : null}
-                {request.prescriptions ? (<li>Read prescriptions</li>) : null}
+                {request.healthcare ? (<li>&bull; Read healthcare data</li>) : null}
+                {request.prescriptions ? (<li>&bull; Read prescriptions</li>) : null}
               </ul>
 
               <p className="mt-4">Duration: {request.duration} days</p>

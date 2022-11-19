@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 import Navbar from './Navbar'
 import Greeting from '../Greeting'
@@ -14,6 +14,7 @@ export default function Patient() {
   const [healthcare, setHealthcare] = useState(false)
   const [prescriptions, setPrescriptions] = useState(false)
   const [duration, setDuration] = useState(1)
+  const navigate = useNavigate()
 
   const patient = Backend.patients.find(patient => patient.id == params.id)
 
@@ -29,7 +30,7 @@ export default function Patient() {
       duration,
     })
 
-    console.log(Backend.requests)
+    navigate('/professional/')
   }
 
   return (
