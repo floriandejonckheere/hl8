@@ -14,7 +14,7 @@ export default function Patient() {
 
   return (
     <>
-      <div className="p-8 flex flex-col">
+      <div className="p-8 flex flex-col justify-between">
         <Greeting name={professionals[0].name} />
 
         You are requesting access to the data of
@@ -30,7 +30,7 @@ export default function Patient() {
           <Switch id="prescriptions" label="Medication prescriptions" />
         </div>
 
-        <div className="mt-8">
+        <div className="mt-10">
           <Select label="Duration of access grant">
             <Option>1 day</Option>
             <Option>3 days</Option>
@@ -38,7 +38,7 @@ export default function Patient() {
           </Select>
         </div>
 
-        <Link to={`/professional/patients/${patient.id}/request`} className="mt-52">
+        <Link to={`/professional/patients/${patient.id}/request`} className="mt-8">
           <Button color="blue" size="lg" fullWidth>Request access to data</Button>
         </Link>
       </div>
