@@ -16,7 +16,7 @@ const Backend = {
     {
       id: 2,
       name: "Marttila Leea",
-      birthdate: "23.10.1999",
+      birthdate: "23.10.1959",
       sex: "Female",
       image: "patient2-thumb.jpg",
     },
