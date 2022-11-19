@@ -58,6 +58,22 @@ const Backend = {
       approved: false,
     },
   ],
+  prescriptions: [
+    {
+      id: 0,
+      patientId: 1,
+      startDate: "2022-11-01",
+      endDate: "2022-12-01",
+      medication: "Amoxicillin 250mg 3x1 day",
+    },
+    {
+      id: 1,
+      patientId: 1,
+      startDate: "2022-10-15",
+      endDate: "2022-12-01",
+      medication: "Vancomycin 500mg 2 tablets per day",
+    }
+  ],
 }
 
 export default Backend

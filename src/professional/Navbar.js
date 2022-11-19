@@ -7,7 +7,7 @@ export default function Navbar() {
     <div className="bg-white fixed bottom-0 w-full border-t border-gray-200 flex">
       <NavLink
         to="/professional/"
-        className={({ isActive }) => `flex flex-grow items-center justify-center p-2 ${!isActive ? "text-gray-500" : undefined}` }
+        className={({ isActive }) => `flex flex-grow items-center justify-center active:bg-blue-50 p-2 ${!isActive ? "text-gray-500" : undefined}` }
       >
         <div className="text-center">
             <span className="block h-8 pl-3 text-3xl text-center">
@@ -19,7 +19,7 @@ export default function Navbar() {
 
       <NavLink
         to="/professional/patients"
-        className={({ isActive }) => `flex flex-grow items-center justify-center p-2 ${!isActive ? "text-gray-500" : undefined}` }
+        className={({ isActive }) => `flex flex-grow items-center justify-center active:bg-blue-50 p-2 ${!isActive ? "text-gray-500" : undefined}` }
       >
         <div className="text-center">
             <span className="block h-8 pl-2 text-3xl text-center">
@@ -31,7 +31,7 @@ export default function Navbar() {
 
       <NavLink
         to="/professional/account"
-        className={({ isActive }) => `flex flex-grow items-center justify-center p-2 ${!isActive ? "text-gray-500" : undefined}` }
+        className={({ isActive }) => `flex flex-grow items-center justify-center active:bg-blue-50 p-2 ${!isActive ? "text-gray-500" : undefined}` }
       >
         <div className="text-center">
             <span className="block h-8 pl-2 text-3xl text-center">

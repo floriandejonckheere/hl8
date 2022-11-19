@@ -8,6 +8,7 @@ import Signin from './Signin'
 
 import PatientHome from './patient/Home'
 import PatientData from './patient/Data'
+import PatientPrescriptions from './patient/Prescriptions'
 import PatientAccount from './patient/Account'
 
 import ProfessionalHome from './professional/Home'
@@ -25,6 +26,7 @@ function App() {
 
         <Route path="/patient/" element={<PatientHome />} />
         <Route path="/patient/data/" element={<PatientData />} />
+        <Route path="/patient/prescriptions/" element={<PatientPrescriptions />} />
         <Route path="/patient/account/" element={<PatientAccount />} />
 
         <Route path="/professional" element={<ProfessionalHome />} />
