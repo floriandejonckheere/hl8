@@ -28,8 +28,10 @@ const Backend = {
       image: "patient3-thumb.jpg",
     }
   ],
+  requestId: 0,
   requests: [
     {
+      id: 0,
       professionalId: 0,
       patientId: 1,
       healthcare: true,
