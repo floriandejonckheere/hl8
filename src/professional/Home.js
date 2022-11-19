@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import Greeting from '../Greeting'
 
 import Backend  from '../Backend'
-import { Card, CardBody} from '@material-tailwind/react'
+import { Card, CardBody } from '@material-tailwind/react'
 
 export default function Home() {
   const requests = Backend.requests.filter(r => r.professionalId == 0 && r.approved == null)

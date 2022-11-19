@@ -43,8 +43,8 @@ export default function Home() {
         {requests.map((request, index) => (
           <Card className="w-full mb-3" key={request.id}>
             <CardBody>
-              <strong>{Backend.professionals.find(p => p.id == request.professionalId).name}</strong> wants to
-              <ul className="mt-4">
+              <strong>{Backend.professionals.find(p => p.id == request.professionalId).name}</strong> is requesting to
+              <ul className="mt-2">
                 {request.healthcare ? (<li>&bull; Read healthcare data</li>) : null}
                 {request.prescriptions ? (<li>&bull; Read prescriptions</li>) : null}
               </ul>
